@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2>Add New Property</h2>
+    <form method="post" action="/listings" novalidate  class="needs-validation">
+        <div>
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]"
+         type="text" 
+         class="form-control"
+         required>
+         
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea  name="listing[description]"
+              type="text" 
+              class="form-control"
+              required></textarea>
+
+        </div>
+        
+        <div>
+            <label for="image" class="form-label">Image</label>
+            <input name="listing[image]" 
+             type="text"
+             class="form-control">
+        </div>
+        
+       <div>
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" 
+         type="number"
+         class="form-control"
+         required>
+
+       </div>
+         <div>
+            <label for="location" class="form-label">Location</label>    
+            <input name="listing[location]"
+              type="text"
+              class="form-control"
+              required >
+
+         </div>
+         
+         <div>
+            <label for="country" class="form-label">Country</label>    
+            <input name="listing[country]"
+             type="text"
+             class="form-control"
+             required>
+
+         </div>
+        
+        
+
+        <button class="btn btn-dark">Add</button>
+        
+    </form>
+</body>

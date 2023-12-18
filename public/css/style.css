@@ -1,0 +1,89 @@
+.navbar{
+    height: 4rem;
+   background-color: white;
+}
+
+.fa-paper-plane {
+    color: #fe424d;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+.f-info{
+    text-align: center;
+    height: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   background-color: rgb(154, 153, 153);
+   align-items: space-evenly;
+
+}
+
+.f-info-links , .f-info-socials , .f-brand {
+    width: 100%;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    /* color: #222222; */
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+   
+}
+
+
+
+
+
+.f-info-socials i{
+    font-size: large;
+    margin: 0.7rem;
+ }
+
+ .listing-card{
+    border: none !important;
+    margin-bottom: 2rem ;
+    
+
+ }
+
+ .card-img-top{
+   border-radius: 1rem !important;
+ }
+
+ .card-title{
+    font-weight: 600;
+ }
+
+ .card-text{
+    font-weight: 400;
+ }
+
+ .listing-link{
+    text-decoration: none;
+    color: #222222;
+ }
+
+ .show-image{
+      height: 30vh;  
+
+ }
+
+ .card-text{
+    font-weight: 500;
+    font-size: large;
+ }
+
+ .btns{
+    display: flex;
+    
+
+ }
