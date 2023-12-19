@@ -18,7 +18,7 @@ main().then(()=>{
     console.log("connected to db");
 })
 .catch(()=>{
-    console.log(err);
+    console.log("err");
 })
 
 async function main () {
