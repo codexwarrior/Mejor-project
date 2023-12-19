@@ -104,11 +104,12 @@ app.put("/listings/:id",
     res.redirect(`/listings/${listings._id}`);
   }))
 
-  //Delete
-  app.post("/listings/:id/reviews/:reviewId",wrapAsync(async(req,res)=>{
+  //Delete review
+  app.delete("/listings/:id/reviews/:reviewId",
+  wrapAsync(async(req,res)=>{
     let {id, reviewId} = req.params;
-    await Listing.findByIdAndUpdate
-    await Review.findById(reviewId);
+    await Listing.findByIdAndUpdate(id,{$pull: {reviews: reviewId}});
+    await Review.findByIdAndDelete(reviewId);
     res.redirect(`/listings/${id}`);
   }))
 
