@@ -36,6 +36,9 @@ app.get("/",(req,res)=>{    //Root Api
     res.send("hi, i'm root");
 })
 
+
+
+
 //index route
 app.get("/listings", async (req, res) => {
     const allListings = await Listing.find({});
@@ -127,7 +130,7 @@ app.put("/listings/:id",
 
 
 
-app.listen(3000 ,() => {
+app.listen(8080 ,() => {
     console.log("server is listning to port 8080");  
 });
 
