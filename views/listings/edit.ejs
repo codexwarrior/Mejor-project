@@ -1,7 +1,11 @@
 <% layout("/layouts/boilerplate") %>
   <body>
     <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate  class="needs-validation">
+    <form 
+      method="POST" 
+      action="/listings/<%= listing._id %>?_method=PUT" 
+      novalidate  class="needs-validation" 
+      enctype="multipart/form-data">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input name="listing[title]"
@@ -24,10 +28,16 @@
       <div class="mb-1">
         <label for="image" class="form-label">Image</label>
         <input name="listing[image]" 
-        value="<%= listing.image %>" type="text"
-        class="form-control"  />
+         type="file"
+         class="form-control"/>
 
       </div>
+      <br /><br />
+      Old Image preview
+      <div class="mb-1">
+        <img src="<%= originalImageUrl %>" alt="">
+      </div>
+      
       <br /><br />
       <div class="mb-1">
         <label for="price" class="form-label">Price</label>    

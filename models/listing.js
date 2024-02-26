@@ -9,9 +9,8 @@ const listningSchema = new Schema({
     },
     description : String ,
     image :{
-        type : String,
-        set :(v) => v === "" ? 
-        "https://images.unsplash.com/photo-1695821449523-6929f4e61b6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=1000&q=60" : v,
+       url: String,
+       filename:String,
     } ,
     price : Number,
     location : String,
@@ -21,7 +20,12 @@ const listningSchema = new Schema({
             type:Schema.Types.ObjectId,
             ref: "Review"
         }
-    ]
+    ],
+    owner:{
+        type : Schema.Types.ObjectId,
+        ref:"User"
+
+    }
 });
 
 listningSchema.post("findOneAndDelete",async(listing)=>{
