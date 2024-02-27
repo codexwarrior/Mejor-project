@@ -24,7 +24,7 @@
 
 .f-info-links , .f-info-socials , .f-brand {
     width: 100%;
-    vertical-align: middle;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
