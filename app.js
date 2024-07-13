@@ -293,5 +293,5 @@ app.get("/listings/:id/edit",isLoggedin,isOwner, async (req, res) => {
 
 
 app.listen(8080 ,() => {
-    console.log("server is listning to port 8080");  
+    console.log("server is listning to port 2000");  
 });
